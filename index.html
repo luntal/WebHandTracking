@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Handmate Effects</title>
+  <link rel="stylesheet" type="text/css" href="appstyle.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.31/Tone.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <video class="input_video"></video>
+    <div class="canvas-container">
+    <canvas class="output_canvas" width="1280px" height="720px"></canvas>
+    <!-- <canvas class="output_canvas"></canvas> -->
+    </div>
+  </div>
+
+  <div class="view">
+    <button onclick="toggleControl()" id="controlButton">Hide controls</button>
+  </div>
+  <div class="control-panel">
+    <br>
+    
+    Selfie view <input id="selfie" type="checkbox" checked="checked">
+    Show tracking <input id="showTracking" type="checkbox" checked="checked">
+    Fps <span id="fps"></span>
+    <hr>
+   
+    <div class="select">
+        <label for="videoSource">Camera </label><select id="videoSource"></select>
+    </div>
+    
+  </div>      
+  <script type="text/javascript" src="fingerpose.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
